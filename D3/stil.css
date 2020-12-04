@@ -1,0 +1,31 @@
+h1{
+    color: red;
+    text-align: center;
+    border-style: hidden;
+    background-color: rgb(22, 4, 104);
+}
+
+h3{
+    color: rgb(219, 29, 29);
+}
+
+body{
+    background-color: rgb(237, 243, 245);
+}
+
+.jedan{
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;   
+}
+
+#okvir1{
+    border-style: dotted;
+    width: 30%;
+    border-color: rosybrown;
+}
+
+#sredina{
+    text-align: center;
+    font-family: monospace;
+}
