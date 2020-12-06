@@ -1,0 +1,37 @@
+.mob{
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.naslov{
+    text-align: left;
+    font-size: xx-large;
+    height: 100px;
+}
+
+body{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+tr{
+    border-width: 30%;
+}
+
+#para{
+    height: 100px;
+}
+
+#dodaci{
+    font-size: x-large;
+    text-align: left;
+    padding-left: 20%;
+    height: 60px;
+}
+
+.plavo:visited{
+    color: blue;
+}
+
+
