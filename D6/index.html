@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+    
+    <form action="">
+        <div class="row">
+            <label class="col-2" for="">Ime i Prezime</label>
+            <section class="col-2"></section>
+            <input class="col-8" type="text" placeholder="Unesite svoje ime i prezime">
+        </div>
+        <div class="row">
+            <label class="col-2" for="">Pretražite</label>
+            <section class="col-2"></section>
+            <input class="col-3" id="manje" type="text" placeholder="Pretražite">
+        </div>
+        <div class="row">
+            <label class="col-2" for="">Zemlja</label>
+            <section class="col-2"></section>
+            <select class="col-8" name="" id="">
+                <optgroup>
+                    <option value="">Italija</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="row">
+            <label class="col-2" for="">Opis</label><br>
+            <section class="col-2"></section>
+            <textarea class="col-8" name="" id="" cols="30" rows="10" placeholder="Napišite neki opis..."></textarea>
+        </div>
+        <div class="row">
+            <!--Zasto se desava kad stavim da mi input polje zauzima jednu kolonu a prazan deo 11, prilikom menjanja na desktop resolution, dugme se ne vidi celo vec samo 3/4? To je jedini razlog razmere 10:2 koja je sada.-->
+            <section class="col-10"></section>
+            <input class="col-2" id="zeleno" type="submit" value="Potvrdite">
+        </div>
+    </form>
+</body>
+</html>
