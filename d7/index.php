@@ -17,9 +17,8 @@
     echo "<br><br>";
     // Zadatak 2
     $n = 125;
-    $a1 = 43;
-    $a2 = 2;
-    $presotalo = $n - $a1 - $a2;
+    $a = 43 + 45;
+    $presotalo = $n - $a;
     echo "Preostale strane za citanje:";
     echo $presotalo;
     echo "<br><br>";
