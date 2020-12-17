@@ -26,11 +26,11 @@
     $p = 2000;
     $m = 1500;
     $k = 900;
-    $ukupnoPara = 4400;
-    $kusurPera = ($ukupnoPara / 2) - $m;
+    $ukupnoPara = ($p + $m) - $k;
+    $kusurPera = $p - ($ukupnoPara / 2);
     echo "Perin kusur:";
     echo $kusurPera;
-    $kusurMika = ($ukupnoPara / 2) -$p;
+    $kusurMika = $m - ($ukupnoPara / 2);
     echo "<br>";
     echo "Mikin kusur:";
     echo $kusurMika;
