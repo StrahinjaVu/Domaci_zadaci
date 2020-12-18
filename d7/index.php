@@ -1,24 +1,16 @@
 <?php
     // Zadatak 1
-    $faren = 85;
-    $celzijus = ($faren - 32) * 5/9;
-    echo "Temperatura u celzijusima:";
-    echo $celzijus;
-    echo "<br>";
-    $kelvin = $celzijus + 273.15;
-    echo "<br>";
-    echo "Temperatura u kelvinima:";
-    echo $kelvin;
-    echo "<br><br>";
-    $cel = 29.4;
-    $farenh = (9/5 * 29.4) + 32;
-    echo "Temperatura u farenhajtima:";
-    echo $farenh;
-    echo "<br><br>";
+    $faren = 50;
+    $kelvin = 283.15;
+    $FuK = ($faren - 32) / 1.8 + 273.15;
+    $KuF = ($kelvin - 273.15) * 1.8 + 32;
+    echo "<p>Rezultat konvertovanja u kelvine: $FuK</p>";
+    echo "<p>Rezultat konvertovanja u kelvine: $KuF</p>";
+    
     // Zadatak 2
     $n = 125;
-    $a = 43 + 45;
-    $presotalo = $n - $a;
+    $a = 43;
+    $presotalo = $n - (2 * $a + 2);
     echo "Preostale strane za citanje:";
     echo $presotalo;
     echo "<br><br>";
