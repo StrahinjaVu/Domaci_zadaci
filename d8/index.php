@@ -1,8 +1,7 @@
 <?php
 // 1. Zadatak
     $v = 46;
-    $n = 3;
-    $brlj = $v / $n;
+    $n = 16;
     $visak = round($n - ($v / 3));
     if($n * 3 < $v){
         echo "<p style='color: green;'>Da</p>";
