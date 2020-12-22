@@ -1,10 +1,10 @@
 <?php
 // 1. Zadatak
-    $v = 15;
-    $n = 7;
+    $v = 46;
+    $n = 3;
     $brlj = $v / $n;
-    $visak = $n - ($v / 3);
-    if($brlj % 3 == 0){
+    $visak = round($n - ($v / 3));
+    if($n * 3 < $v){
         echo "<p style='color: green;'>Da</p>";
     }
     else {
