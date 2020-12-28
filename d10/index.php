@@ -11,7 +11,7 @@ $ostatak = 0;
 while($n > 0 ){
     $ostatak = $n % 10;
     $zbirCifara = $zbirCifara + $ostatak;
-    $n = $n / 10;
+    round($n = $n / 10);
     }
 
     if($zbirCifara == $m)
