@@ -10,15 +10,14 @@
     while($n <= $m)
     {
         if($n % 7 == 0 && $n % 3 != 0){
-            if($n % 3 == 0 && $n % 7 != 0){
+            $p *= $n;
+        }
+        if($n % 3 == 0 && $n % 7 != 0){
             $sum += $n;
         }
-            $p *= $n;
-            
-        }
-        $raz = $p - $sum;
         $n++;
     }
+    $raz = $p - $sum;
     echo "<p> Razlika sa WHILE petljom je: $raz </p>";
 
     echo "<hr>";
@@ -32,14 +31,13 @@
     $raz = 0;
     for($i = $n; $i <= $m; $i++){
         if($i % 7 == 0 && $i % 3 != 0){
-            if($i % 3 == 0 && $i % 7 != 0){
+            $p *= $i;
+        }
+        if($i % 3 == 0 && $i % 7 != 0){
             $sum += $i;
         }
-            $p *= $i;
-            
-        }
-        $raz = $p - $sum;
     }
+    $raz = $p - $sum;
     echo "<p> Razlika sa FOR petljom je: $raz</p>";
 
     echo "<hr>";
