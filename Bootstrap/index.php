@@ -28,16 +28,16 @@
         $dir = 'slikezaheader';
         $slike = array("1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg");
 
-        $count_img_index = count($slike) - 1;
-        $random_img = $slike[rand( 0, $count_img_index )];
-        $random_img1 = $slike[rand( 0, $count_img_index )];
-        $random_img2 = $slike[rand( 0, $count_img_index )];
+        $menja = array_rand($slike, 3);
+        $img1 = $dir."/" . $slike[$menja[0]];
+        $img2 = $dir."/" . $slike[$menja[1]];
+        $img3 = $dir."/" . $slike[$menja[2]];
 
         ?>
         
-        <img class="carousel-item active" src="<?php echo $dir."/".$random_img ?>">
-        <img class="carousel-item" src="<?php echo $dir."/".$random_img1 ?>">
-        <img class="carousel-item" src="<?php echo $dir."/".$random_img2 ?>">
+        <img class="carousel-item active" src="<?php echo $img1?>">
+        <img class="carousel-item" src="<?php echo $img2?>">
+        <img class="carousel-item" src="<?php echo $img3?>">
         </div>
         
         <!-- Levi i desni kursor -->
@@ -64,6 +64,9 @@
         <li class="nav-item">
         <a class="nav-link" href="?categoryVariable=motivacija">Motivacija</a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="?categoryVariable=citati">Svi Citati</a>
+        </li>
     </ul>
     </nav>
     
@@ -87,6 +90,7 @@
         echo $citati[$randomIndex]['text'], '<br>';
         echo $citati[$randomIndex]['author'], '<br>';
         }
+
     
     ?>
     
