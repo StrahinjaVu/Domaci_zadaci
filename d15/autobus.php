@@ -76,19 +76,17 @@ maxSedista($autobusi);
 echo "<hr>";
 
 // RASPODELA LJUDI U BUSEVE
-function ljudi($autobusi){
-    $ljudi = 198;
+function ljudi($autobusi, $ljudi){
     $suma = 0;
     foreach($autobusi as $bus){
             $suma += $bus->getBrojSedista();
         }
-    foreach($autobusi as $bus){
         if($suma >= $ljudi){
             return true;
         }else{
             return false;
         }
     }
-}
 
-echo ljudi($autobusi);
+
+echo ljudi($autobusi, 198);
