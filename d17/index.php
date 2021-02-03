@@ -21,13 +21,12 @@ function najvecaSkolarina($niz){
     foreach($niz as $s){
         if($s->skolarina(rand(35,60)) > $max){
             $max = $s->skolarina(rand(35,60));
-            $m = $s;
         }
     }
-    return $m->ispis();
+    return $max;
 }
 
-najvecaSkolarina($studenti);
+echo najvecaSkolarina($studenti);
 
 echo "<hr>";
 function prosek($niz){
