@@ -37,5 +37,8 @@ SELECT CONCAT (`naslov`,"(",`reziser`,")") AS "Naslovi sa reziserima" FROM `film
 -- Selektovati sve filmove u obliku naslov(reziser) - godina izdanja.
 SELECT CONCAT (`naslov`, "(", `reziser`, ")", " ", "-", " ", `god_izdavanja`) AS "Naslovi sa reziserima i godinom" FROM `filmovi`;
 
+-- Odrediti prosečnu ocenu fimova koji su izdati nakon 2000 godine
+SELECT AVG(`ocena`) AS "Prosecna ocena filmova nakon 2000. godine" FROM `filmovi` WHERE `god_izdavanja` > 2000;
+
 
 
