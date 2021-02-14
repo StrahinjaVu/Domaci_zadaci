@@ -1,0 +1,26 @@
+.tabela{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.tabela th, .tabela td {
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    padding: 5px;
+}
+
+.tabela th{
+    background-color: rgb(16, 194, 10);
+    color: rgb(255, 255, 255);
+    border-top: none;
+    border-radius: 6px;
+}
+
+td:first-child, th:first-child{
+    border-left: none;
+}
+
+
