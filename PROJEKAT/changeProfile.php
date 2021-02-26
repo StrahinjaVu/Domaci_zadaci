@@ -12,6 +12,7 @@
     $surname = $red['surname'];
     $gender = $red['gender'];
     $dateOfBirth = $red['dob'];
+    $biografija = $red['bio'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +33,8 @@
 <body>
 
     <?php
-        $name = $surname = $gender = $dateOfBirth = "";
-        $nameErr = $surnameErr = $genderErr = $dateOfBirthErr ="";
+        $name = $surname = $gender = $dateOfBirth = $biografija = "";
+        $nameErr = $surnameErr = $genderErr = $dateOfBirthErr = $biografijaErr = "";
         $prikazi = false;
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -100,6 +101,16 @@
                 $prikazi = true;
                 $dateOfBirth = $_POST["dob"];
             }
+
+            //validacija za biografiju
+            if(empty($_POST["bio"])){
+                $prikazi = false;
+                $biografijaErr = "You have to enter your bio!";
+            }
+            else{
+                $prikazi = true;
+                $biografija = $_POST['bio'];
+            }
         }
     ?>
 
@@ -125,6 +136,11 @@
             <label for="">Date of birth: </label>
             <input type="date" name="dob" value="<?php echo $dateOfBirth; ?>">
             <span class="error"><?php echo $dateOfBirthErr; ?></span>
+
+            <br>
+            <label for="">Biografija:</label>
+            <textarea name="bio" id="" cols="62" rows="10"></textarea>
+            <span class="error"><?php echo $biografijaErr; ?></span>
         
             <br>
             <input type="submit" value="Submit">
@@ -136,7 +152,7 @@
         if($prikazi){
             $q = "UPDATE profiles
             SET
-            `name` = '$name', `surname` = '$surname', `dob` = '$dateOfBirth', `gender` = '$gender'
+            `name` = '$name', `surname` = '$surname', `dob` = '$dateOfBirth', `gender` = '$gender', `bio` = '$biografija'
             WHERE user_id = $id";
             $conn->query($q);
         }
