@@ -57,6 +57,9 @@ require_once "header.php";
         }
     }
 
+    if(!empty($_GET['user_id'])){
+        $friendId = $conn->real_escape_string($_GET['user_id']);
+    }
 
     $pratioci = "SELECT CONCAT(profiles.name, ' ', profiles.surname) AS 'Ime i prezime', users.id, users.username AS 'Korisnicko ime'
     FROM users
@@ -77,10 +80,10 @@ require_once "header.php";
         </tr>";
         foreach($result as $row){
             echo "<tr>";
-            echo "<td>" . $row['Ime i prezime'] . "</td>";
-            echo "<td>" . $row['Korisnicko ime'] . "</td>";
             $friendId = $row['id'];
-
+            echo "<td> <a href='profile.php?user_id=$friendId'>" . $row['Ime i prezime'] . "</a></td>";
+            echo "<td>" . $row['Korisnicko ime'] . "</td>";
+            
             // Ispitujemo da li pratim korisnika
             $sql1 = "SELECT * FROM followers
             WHERE sender_id = $id
