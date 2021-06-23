@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 40%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+@media screen and (max-width:425px){
+    .nav-links{
+        position:absolute;
+        top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-weight: bold;
+    }
+    .logo{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.nav-links a{
+    text-decoration: none;
+}
+
+.card{
+    width: 700px;
+    height: 250px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(242,245,248,1) 35%, rgba(236,236,237,1) 100%);
+    box-shadow: 0 13px 15px rgba(0, 0, 0, 0.3);
+    margin-left: 15%;
+    margin-top: 130px;
+    transition: background-color .5s, box-shadow .5s, margin-left .5s;
+}
+
+.card:hover{
+    margin-left: 8%;
+    background-color: #ffff;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
+    transition: background-color .5s, box-shadow .5s, margin-left .5s;
+}
+
+.post-image{
+    width: 200px;
+    height: 220px;
+    margin-top: 15px;
+    margin-left: 15px;
+    float: left;
+}
+
+.post-content{
+    width: 55%;
+    height: 250px;
+    float: left;
+    margin-left: 5px;
+    overflow: hidden;
+}
+
+a:link{
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    color: #3B3C3F;
+    text-decoration: none;
+}
+
+.post-header{
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 15px;
+    color: #3B3C3F;
+    margin-left: 18px;
+    
+}
+
+.post-text{
+    font-size: 15px;
+    padding-left: 20px;
+    color: #768CA4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dugme{
+    margin-left: 20px;
+    margin-top: 27px;
+}
+
+.button {
+    background-color: #1515af;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
